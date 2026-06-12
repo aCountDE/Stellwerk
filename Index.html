@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Stellwerk</title>
+
+<!-- Verhindert Chrome-Android-Viewport-Bugs -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+
+<style>
+    :root {
+        --bg: #121212;
+        --panel: rgba(17,17,17,0.7);
+        --accent: #1e88e5;
+        --accent2: #00ff66;
+        --text: #e0e0e0;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #app {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        background: #1a1a1a;
+        overflow: hidden;
+    }
+
+    /* Canvas Container */
+    #canvasContainer {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #trackCanvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+        background: #1a1a1a;
+    }
+
+    /* Overlay Sidebar */
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: min(320px, 80vw);
+        background: var(--panel);
+        backdrop-filter
